@@ -1,0 +1,13 @@
+export interface Experience {
+  id: string;
+  company: string;
+  role: string;
+  employmentType: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  responsibilities: string[];
+  technologies: string[];
+  current: boolean;
+}
