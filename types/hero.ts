@@ -1,4 +1,5 @@
-export interface SiteInfo {
+export interface Hero {
+  _id: string;
   name: string;
   firstName: string;
   lastName: string;

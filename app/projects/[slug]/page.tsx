@@ -5,9 +5,7 @@ import {
   getProjectBySlug,
 } from "@/services/project.service";
 
-import { getProjectShowcase } from "@/services/projectShowcase.service";
 import ProjectCaseStudy from "@/components/sections/ProjectCaseStudy";
-
 
 interface ProjectPageProps {
   params: Promise<{
@@ -29,16 +27,10 @@ export default async function ProjectPage({
   const { slug } = await params;
 
   const project = await getProjectBySlug(slug);
-  const showcase = await getProjectShowcase(slug);
 
-  if (!project || !showcase) {
+  if (!project) {
     notFound();
   }
 
-  return (
-    <ProjectCaseStudy
-      project={project}
-      showcase={showcase}
-    />
-  );
+  return <ProjectCaseStudy project={project} />;
 }

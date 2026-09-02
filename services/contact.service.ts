@@ -1,19 +1,24 @@
+import api from "./api";
 import type { ContactFormData } from "@/types/contact";
 
+interface ContactResponse {
+  success: boolean;
+  message: string;
+  data: {
+    _id: string;
+    name: string;
+    email: string;
+    message: string;
+    status: "New" | "Read";
+    createdAt: string;
+    updatedAt: string;
+  };
+}
+
 export async function submitContactForm(
-  data: ContactFormData,
-) {
-  const response = await fetch("/api/contact", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
+  data: ContactFormData
+): Promise<ContactResponse> {
+  const response = await api.post<ContactResponse>("/contact", data);
 
-  if (!response.ok) {
-    throw new Error("Failed to send message");
-  }
-
-  return response.json();
+  return response.data;
 }

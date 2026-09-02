@@ -8,6 +8,8 @@ const navigation = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -30,7 +32,7 @@ export default function Navbar() {
             Oz<span className="text-blue-500">.</span>
           </Link>
 
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-6 md:flex">
             {navigation.map((item) => (
               <Link
                 key={item.href}
