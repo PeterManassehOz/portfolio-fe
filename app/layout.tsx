@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Oz Peter Manasseh | Full-Stack Software Engineer",
   description:
     "Portfolio of Oz Peter Manasseh, a full-stack software engineer building production-grade web applications and digital systems.",
+    icons: {
+    icon: "images/general/oz.jpg",
+  },
 };
 
 export default function RootLayout({
