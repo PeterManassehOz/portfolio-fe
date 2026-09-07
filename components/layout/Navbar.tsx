@@ -16,6 +16,10 @@ const navigation = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  
+  const resumeUrl =
+    "https://acrobat.adobe.com/id/urn:aaid:sc:EU:fef37865-7495-49f1-a795-fc500f5820d7";
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
@@ -44,7 +48,7 @@ export default function Navbar() {
             ))}
 
             <a
-              href="/documents/resume.pdf"
+              href={resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-border-strong bg-white px-4 py-2 text-sm font-medium text-black transition-transform hover:scale-105"
