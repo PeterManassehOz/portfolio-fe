@@ -87,3 +87,88 @@ The public portfolio is one part of a larger full-stack system.
                   │  MongoDB   │   │ Cloudinary │
                   │   Atlas    │   │   Images   │
                   └────────────┘   └────────────┘
+
+```
+
+A separate Next.js administration application communicates with the same backend to manage the content displayed on the public portfolio.
+
+Project Structure
+
+```text
+
+portfolio-fe/
+├── app/
+├── components/
+├── services/
+├── public/
+├── types/
+├── utils/
+├── package.json
+└── README.md
+
+```
+
+Getting Started
+1. Clone the repository
+
+```text
+
+git clone https://github.com/PeterManassehOz/portfolio-fe.git
+cd portfolio-fe
+
+```
+3. Install dependencies
+
+```text
+npm install
+
+```
+
+5. Configure environment variables
+
+Create a .env.local file:
+
+```text
+
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/api/v1
+
+```
+The production application uses the deployed Portfolio API.
+
+4. Start the development server
+
+```text
+npm run dev
+
+The application will be available at:
+
+http://localhost:3000
+
+```
+5. Build for production
+
+```text
+
+npm run build
+
+```
+Content Management
+
+Portfolio content is not hardcoded into the public application.
+
+The public frontend retrieves content from the Portfolio API, which allows the portfolio to be updated through a dedicated administration dashboard.
+
+This makes the portfolio behave more like a real content-driven application than a static personal website.
+
+Deployment
+
+The frontend is deployed on Vercel.
+
+The backend API is deployed separately on Render.
+
+Environment-specific API configuration is provided through Vercel environment variables.
+
+Author
+Oz Peter Manasseh
+
+Full-Stack Engineer focused on building modern, scalable web applications and intuitive digital experiences.
