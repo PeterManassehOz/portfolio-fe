@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oz Peter Manasseh — Portfolio
 
-## Getting Started
+A modern, responsive developer portfolio built with Next.js and powered by a custom REST API.
 
-First, run the development server:
+The portfolio showcases my experience, education, achievements, projects, technical skills, and professional journey through a polished, animated interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The application is backed by a dedicated Express + TypeScript API and MongoDB database, with a separate administration dashboard for managing portfolio content.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Live Portfolio
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Public Website:**  
+https://ozpetermanasseh.vercel.app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Related Repositories
 
-## Learn More
+- **Public Frontend:** https://github.com/PeterManassehOz/portfolio-fe
+- **Admin CMS:** https://github.com/PeterManassehOz/portfolio-admin
+- **Backend API:** https://github.com/PeterManassehOz/portfolio-server
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Responsive portfolio experience
+- Animated UI interactions
+- Hero section
+- About section
+- Experience
+- Education
+- Achievements
+- Projects and project case studies
+- Contact functionality
+- Dynamic content loaded from the backend API
+- Cloud-hosted project images
+- SEO-friendly Next.js architecture
+- Production deployment with Vercel
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- CSS animations
+- Next.js App Router
+
+### Backend Integration
+
+- REST API
+- Axios
+- MongoDB
+- Cloudinary
+
+### Deployment
+
+- Vercel — Frontend
+- Render — Backend API
+
+---
+
+## Architecture
+
+The public portfolio is one part of a larger full-stack system.
+
+```text
+                    ┌─────────────────────────┐
+                    │     Public Portfolio     │
+                    │       Next.js            │
+                    │         Vercel           │
+                    └────────────┬────────────┘
+                                 │
+                                 │ REST API
+                                 ▼
+                    ┌─────────────────────────┐
+                    │      Portfolio API       │
+                    │   Express + TypeScript   │
+                    │         Render           │
+                    └────────────┬────────────┘
+                                 │
+                         ┌───────┴───────┐
+                         ▼               ▼
+                  ┌────────────┐   ┌────────────┐
+                  │  MongoDB   │   │ Cloudinary │
+                  │   Atlas    │   │   Images   │
+                  └────────────┘   └────────────┘
