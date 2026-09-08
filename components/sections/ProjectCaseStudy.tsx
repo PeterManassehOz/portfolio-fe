@@ -110,7 +110,7 @@ export default function ProjectCaseStudy({
                 }}
                 className="max-w-3xl text-lg leading-8 text-muted sm:text-xl sm:leading-9"
               >
-                {project.shortDescription}
+                {project.description}
               </motion.p>
 
               {/* Meta */}
@@ -263,6 +263,67 @@ export default function ProjectCaseStudy({
       </section>
 
       {/* =========================================================
+         WHAT IT DOES
+      ========================================================= */}
+
+      {showcase.whatItDoes.length > 0 && (
+        <section className="relative overflow-hidden py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-12 lg:grid-cols-[0.3fr_1fr] lg:gap-24">
+              <div>
+                <div className="flex items-center gap-4">
+                  <span className="font-mono text-xs tracking-[0.25em] text-blue-400/70">
+                    02
+                  </span>
+
+                  <span className="h-px w-10 bg-blue-500/30" />
+                </div>
+
+                <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.25em] text-muted-foreground">
+                  What it does
+                </p>
+              </div>
+
+              <div className="grid gap-5 md:grid-cols-2">
+                {showcase.whatItDoes.map((item, index) => (
+                  <motion.article
+                    key={`${item}-${index}`}
+                    initial={{
+                      opacity: 0,
+                      y: 25,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    viewport={{
+                      once: true,
+                      amount: 0.2,
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.07,
+                    }}
+                    className="group relative overflow-hidden rounded-[1.75rem] border border-white/[0.07] bg-surface/35 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-blue-500/20 hover:bg-surface/60 sm:p-8"
+                  >
+                    <span className="font-mono text-xs tracking-[0.2em] text-blue-400/70">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <p className="mt-5 text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                      {item}
+                    </p>
+
+                    <div className="mt-7 h-px w-10 bg-blue-500/30 transition-all duration-500 group-hover:w-20" />
+                  </motion.article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* =========================================================
           CONTRIBUTION
       ========================================================= */}
 
@@ -274,7 +335,7 @@ export default function ProjectCaseStudy({
             <div>
               <div className="flex items-center gap-4">
                 <span className="font-mono text-xs tracking-[0.25em] text-blue-400/70">
-                  02
+                  03
                 </span>
 
                 <span className="h-px w-10 bg-blue-500/30" />
@@ -330,7 +391,7 @@ export default function ProjectCaseStudy({
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="flex items-center gap-4">
               <span className="font-mono text-xs tracking-[0.25em] text-blue-400/70">
-                03
+                04
               </span>
 
               <span className="h-px w-10 bg-blue-500/30" />
@@ -379,7 +440,7 @@ export default function ProjectCaseStudy({
       )}
 
       {/* =========================================================
-          HIGHLIGHTS
+         TECHNICAL HIGHLIGHTS
       ========================================================= */}
 
       <section className="relative overflow-hidden py-24 sm:py-32">
@@ -388,14 +449,14 @@ export default function ProjectCaseStudy({
             <div>
               <div className="flex items-center gap-4">
                 <span className="font-mono text-xs tracking-[0.25em] text-blue-400/70">
-                  04
+                  05
                 </span>
 
                 <span className="h-px w-10 bg-blue-500/30" />
               </div>
 
               <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.25em] text-muted-foreground">
-                What it does
+                Technical   Highlights
               </p>
             </div>
 
@@ -451,7 +512,7 @@ export default function ProjectCaseStudy({
             <div>
               <div className="flex items-center gap-4">
                 <span className="font-mono text-xs tracking-[0.25em] text-blue-400/70">
-                  05
+                  06
                 </span>
 
                 <span className="h-px w-10 bg-blue-500/30" />
@@ -489,7 +550,7 @@ export default function ProjectCaseStudy({
               <div>
                 <div className="flex items-center gap-4">
                   <span className="font-mono text-xs tracking-[0.25em] text-blue-400/70">
-                    06
+                    07
                   </span>
 
                   <span className="h-px w-10 bg-blue-500/30" />
@@ -575,7 +636,7 @@ export default function ProjectCaseStudy({
             <div>
               <div className="flex items-center gap-4">
                 <span className="font-mono text-xs tracking-[0.25em] text-blue-400/70">
-                  07
+                  08
                 </span>
 
                 <span className="h-px w-10 bg-blue-500/30" />
